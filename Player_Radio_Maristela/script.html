@@ -1,0 +1,81 @@
+<meta content="width=device-width,initial-scale=1,shrink-to-fit=no"name=viewport>
+<meta charset=utf-8><link href=https://radiomaristela.com.br/player/assets/css/player2.css rel=stylesheet>
+<link href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css rel=stylesheet>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet>
+<audio id=player_html5 src=https://player.srvstm.com/proxy/18372></audio>
+<div class="fixed-bottom lrm-player"id=white>
+    <div class=container><div class=row>
+        <div class="col-md-5 display-inline">
+            <span class=lrm-msg1>NO AR </span>
+            <span class=lrm-msg2>
+                <div id=programacao>
+
+                </div>
+            </span>
+            <span class=lrm-msg3>
+                <div id=horario>
+
+                </div>
+            </span>
+        </div>
+        <div class=col-md-7>
+            <div class=right>
+                <a href=https://radiomaristela.com.br/events/ class="btn btn-primary"style=background-color:#00b1f8;border:#00b1f8;padding:4px;margin-top:5px>Programação</a> 
+                <a href="https://wa.me/5551999319266?text=Olá%20gostaria%20de"target=_black>
+                    <img class=whatsapp src=https://radiomaristela.com.br/player/assets/image/whatsapp.png>
+                </a><img class=audio src=https://radiomaristela.com.br/player/assets/image/audio.png> 
+                <input class=range max=1 min=0 onchange='document.getElementById("player_html5").volume=this.value'step=0.1 type=range value=0.5> 
+                <img class=player src=https://radiomaristela.com.br/player/assets/image/player.png id=player onclick='document.getElementById("player_html5").play(),fplay()'> 
+                <img class=pause src=https://radiomaristela.com.br/player/assets/image/pause.png id=pause onclick='document.getElementById("player_html5").pause(),fpause()'>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<nav class="fixed-bottom navbar navbar-expand-lg navbar-light"style=display:none>
+    <a href=# class=navbar-brand>
+        <img class=player1 src=https://radiomaristela.com.br/player/assets/image/player.png id=player1 onclick='document.getElementById("player_html5").play(),fplay1()'style=width:40px> 
+        <img class=player1 src=https://radiomaristela.com.br/player/assets/image/pause.png id=pause1 onclick='document.getElementById("player_html5").pause(),fpause1()'style=width:40px;display:none> 
+    </a>
+    <button aria-controls=navbarNavAltMarkup aria-expanded=false aria-label="Alterna navegação"class=navbar-toggler data-target=#navbarNavAltMarkup data-toggle=collapse type=button>
+        <span class=navbar-toggler-icon>
+
+        </span>
+    </button>
+    <div class="collapse navbar-collapse"id=navbarNavAltMarkup>
+        <div class=navbar-nav>
+            <a href=# class="nav-item nav-link active">
+                <span class=lrm-msg1>NO AR </span>
+                <span class=lrm-msg2>
+                    <div id=programacao2>
+
+                    </div>
+                </span>
+                <span class=lrm-msg3>
+                    <div id=horario2>
+
+                    </div>
+                </span>
+            </a>
+            <a href="https://wa.me/5551999319266?text=Olá%20gostaria%20de"class="btn btn-primary"style=background-color:#00b1f8;border:#00b1f8;padding:4px;margin-top:5px target=_black>
+                <i class="fa-whatsapp fab">
+
+                </i> 
+            </a>
+            <a href=https://radiomaristela.com.br/events/ class="btn btn-primary"style=background-color:#00b1f8;border:#00b1f8;padding:4px;margin-top:5px>Programação</a> 
+            <a href=# class="nav-item nav-link">
+                <center>
+                    <input class=range max=1 min=0 onchange='document.getElementById("player_html5").volume=this.value'step=0.1 type=range value=0.5>
+                </center>
+                </a>
+        </div>
+    </div>
+</nav>
+<script src=https://radiomaristela.com.br/player/assets/js/jquery-3.4.1.slim.min.js></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js></script>
+<script src=https://radiomaristela.com.br/player/assets/js/index.js></script>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js></script>
+<script>var player1=document.getElementById("player1"),pause1=document.getElementById("pause1");function fplay1(){(player1.style.display="inline")?(document.getElementById("player1").style.display="none",document.getElementById("pause1").style.display="inline"):(document.getElementById("player1").style.display="inline",document.getElementById("pause1").style.display="none")}function fpause1(){(pause1.style.display="inline")?(document.getElementById("player1").style.display="inline",document.getElementById("pause1").style.display="none"):(document.getElementById("player1").style.display="none",document.getElementById("pause1").style.display="inline")}$(document).ready(function(){return $.ajax({type:"post",dataType:"json",url:"https://radiomaristela.com.br/player/programacao/api.php",success:function(e){200==e.code_msg?($("#programacao").html(e.programacao),$("#horario").html(e.horario),$("#programacao2").html(e.programacao),$("#horario2").html(e.horario)):101==e.code_msg&&alert(e.msg_text)}}),!1})</script>
+
+
+
